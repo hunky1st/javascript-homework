@@ -65,3 +65,62 @@ const getDiscountedPrice = (originalPrice, discountPercent) =>
 console.log(getDiscountedPrice(10_000, 0.03));
 // 5. 등급 판단
 // 점수를 전달받아 점수, 등급과 설명을 포함한 객체를 반환하는 함수를 작성합니다.
+function getGradeAndDescription(score) {
+  if (score >= 90) {
+    return (
+      "score: " +
+      score +
+      ", " +
+      "grade: " +
+      "A" +
+      ", " +
+      "descriotion: " +
+      "매우 우수"
+    );
+  } else if (score >= 80) {
+    return (
+      "score: " +
+      score +
+      ", " +
+      "grade: " +
+      "B" +
+      ", " +
+      "descriotion: " +
+      "우수"
+    );
+  } else if (score >= 70) {
+    return (
+      "score: " +
+      score +
+      ", " +
+      "grade: " +
+      "C" +
+      ", " +
+      "descriotion: " +
+      "보통"
+    );
+  } else if (score >= 60) {
+    return (
+      "score: " +
+      score +
+      ", " +
+      "grade: " +
+      "D" +
+      ", " +
+      "descriotion: " +
+      "미달, 통과 기준 근접"
+    );
+  } else if (score >= 50) {
+    return (
+      "score: " +
+      score +
+      ", " +
+      "grade: " +
+      "F" +
+      ", " +
+      "descriotion: " +
+      "낙제"
+    );
+  }
+}
+console.log(getGradeAndDescription(76));
