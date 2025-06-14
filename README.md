@@ -87,7 +87,7 @@
 
   개발자의 센스는 커밋시점과 내용에서 드러난다는 저희 형(개발자)의 이야기가 떠오릅니다. 그 이야기를 처음 들었을때는 무슨 소리인지 몰랐지만 오늘와서는 알듯도 합니다.
 
-- 아이브의 노래 (kitch)[https://music.bugs.co.kr/track/6194446]의 가사를 보면 다음과 같은 가사가 나옵니다.
+- 아이브의 노래 <a href="https://music.bugs.co.kr/track/6194446" target="_blank" rel="noopener noreferrer">Kitsch</a>의 가사를 보면 다음과 같은 가사가 나옵니다.
 
   > "네가 보낸 DM을 읽고나서 답이 없는게 내 답이야"
 
