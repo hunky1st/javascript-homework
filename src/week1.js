@@ -60,6 +60,8 @@ console.log(canSellAlcohol(registrationCard));
 
 // 4. 할인가 계산
 // 판매가와 할인 비율(%)을 입력 받아, 할인가를 반환하는 함수를 작성합니다.
-
+const getDiscountedPrice = (originalPrice, discountPercent) =>
+  "￦" + originalPrice * (1 - discountPercent);
+console.log(getDiscountedPrice(10_000, 0.03));
 // 5. 등급 판단
 // 점수를 전달받아 점수, 등급과 설명을 포함한 객체를 반환하는 함수를 작성합니다.
