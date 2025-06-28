@@ -1,0 +1,16 @@
+/* main.css 파일의 코드 */
+@layer base, theme, components, utilities;
+
+/* 공통/기본 스타일 (야무쌤 깃허브 common 폴더 경로 추정) */
+/* 이 파일들이 없다면 해당 경로에 생성하거나 @import 라인을 제거하세요. */
+@import "/assets/styles/common/_normalize.css" layer(base);
+@import "/assets/styles/common/_base.css" layer(base);
+
+/* 테마 관련 스타일 */
+@import "./_theme.css" layer(theme);
+
+/* 컴포넌트별 스타일 (기존 _accordion.css 파일을 이 스타일로 대체) */
+@import "./components/_accordion.css" layer(components);
+
+/* 필요시 데모 페이지의 추가적인 기본 스타일 */
+/* @import './_demo.css'; */

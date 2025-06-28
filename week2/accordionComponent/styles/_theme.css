@@ -1,0 +1,16 @@
+:root {
+  --text-color: light-dark(#333333, #e0e0e0);
+  --background-color: light-dark(#ffffff, #1a1a1a);
+  --link-color: light-dark(#007bff, #93c5fd);
+  --link-color-dark: light-dark(#0056b3, #60a5fa);
+
+  --accordion-background: var(--background-color);
+  --accordion-text-color: var(--text-color);
+  --accordion-border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="default"] {
+  --accordion-background: #ffffff;
+  --accordion-text-color: #333333;
+  --accordion-border-color: #e0e0e0;
+}
