@@ -1,7 +1,7 @@
 .total-page-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 200px;
+  gap: 5px;
   padding: 10%;
 }
 
@@ -16,6 +16,19 @@
   grid-template-rows: repeat(3, 100px);
 }
 
+.skullthrone-button {
+  background-image: url("/assets/images/skullThrone.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-color: transparent; /* 기본 배경색 투명하게 */
+  border: none;
+  text-indent: -9999px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
 .arc-shape {
   width: 30px;
   height: 30px;
@@ -25,43 +38,54 @@
   border-top: 20px solid #a42c2c;
   border-left: 20px solid #a42c2c;
   border-radius: 100%;
+  grid-template-rows: auto auto 1fr;
+  justify-self: end;
 }
-.top-middle {
-  height: 20px;
-  background-color: #a42c2c;
-  width: 100%;
-}
+
 .arc-shape.top-right {
   border-top: 20px solid #a42c2c;
   border-right: 20px solid #a42c2c;
   border-radius: 100%;
+  grid-template-rows: auto auto 1fr;
 }
-.middle-left {
-  border-left: 20px solid #a42c2c;
-  border-radius: 100%;
-}
+
 .center-of-grid {
   place-self: center;
 }
-.middle-right {
-  border-right: 20px solid #a42c2c;
-  border-radius: 100%;
-}
+
 .arc-shape.bottom-left {
   border-left: 20px solid #a42c2c;
   border-bottom: 20px solid #a42c2c;
   border-radius: 100%;
   align-self: end;
-}
-.bottom-middle {
-  height: 20px;
-  background-color: #a42c2c;
-  width: 100%;
-  align-self: end;
+  justify-self: end;
 }
 .arc-shape.bottom-right {
   border-right: 20px solid #a42c2c;
   border-bottom: 20px solid #a42c2c;
   border-radius: 100%;
   align-self: end;
+}
+
+.speech-bubble {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  background-color: #a42c2c;
+  border-radius: 12px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 22.5px solid transparent; /* 일단 모든 테두리를 투명하게 */
+  border-top-color: #a42c2c;
+  bottom: -45px; /* 본체 바깥 아래로 20px만큼 내리기 (테두리 두께 2배) */
+  right: 50%; /* 왼쪽에서 30px 떨어진 곳에 배치 */
+  transform: translateX(-50%);
 }
