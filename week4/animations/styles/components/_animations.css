@@ -1,0 +1,4 @@
+.release-announcement {
+  display: flex;
+  flex-direction: column;
+}
