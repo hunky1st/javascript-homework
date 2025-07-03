@@ -1,4 +1,62 @@
+.total-page-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10%;
+}
+
 .release-announcement {
   display: flex;
   flex-direction: column;
+}
+
+.for-warhammer-animation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.arc-shape {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+.arc-shape.top-left {
+  border-top: 20px solid #a42c2c;
+  border-left: 20px solid #a42c2c;
+  border-radius: 100%;
+}
+.top-middle {
+  height: 20px;
+  background-color: #a42c2c;
+  width: 100%;
+}
+.arc-shape.top-right {
+  border-top: 20px solid #a42c2c;
+  border-right: 20px solid #a42c2c;
+  border-radius: 100%;
+}
+.arc-shape.middle-left {
+  border-left: 20px solid #a42c2c;
+  border-radius: 100%;
+}
+.arc-shape.middle-right {
+  border-right: 20px solid #a42c2c;
+  border-radius: 100%;
+}
+.arc-shape.bottom-left {
+  border-left: 20px solid #a42c2c;
+  border-bottom: 20px solid #a42c2c;
+  border-radius: 100%;
+}
+.bottom-middle {
+  height: 20px;
+  background-color: #a42c2c;
+  width: 100%;
+  align-content: end;
+}
+.arc-shape.bottom-right {
+  border-right: 20px solid #a42c2c;
+  border-bottom: 20px solid #a42c2c;
+  border-radius: 100%;
 }
