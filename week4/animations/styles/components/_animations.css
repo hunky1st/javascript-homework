@@ -1,7 +1,7 @@
 .total-page-wrapper {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 200px;
   padding: 10%;
 }
 
@@ -36,11 +36,14 @@
   border-right: 20px solid #a42c2c;
   border-radius: 100%;
 }
-.arc-shape.middle-left {
+.middle-left {
   border-left: 20px solid #a42c2c;
   border-radius: 100%;
 }
-.arc-shape.middle-right {
+.center-of-grid {
+  place-self: center;
+}
+.middle-right {
   border-right: 20px solid #a42c2c;
   border-radius: 100%;
 }
@@ -48,15 +51,17 @@
   border-left: 20px solid #a42c2c;
   border-bottom: 20px solid #a42c2c;
   border-radius: 100%;
+  align-self: end;
 }
 .bottom-middle {
   height: 20px;
   background-color: #a42c2c;
   width: 100%;
-  align-content: end;
+  align-self: end;
 }
 .arc-shape.bottom-right {
   border-right: 20px solid #a42c2c;
   border-bottom: 20px solid #a42c2c;
   border-radius: 100%;
+  align-self: end;
 }
