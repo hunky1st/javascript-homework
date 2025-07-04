@@ -1,13 +1,38 @@
+body {
+  background-color: black;
+}
+
 .total-page-wrapper {
   display: flex;
   flex-direction: row;
   gap: 5px;
   padding: 10%;
+  align-items: center;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.button-group a {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5%;
+  background-color: #a42c2c;
 }
 
 .release-announcement {
   display: flex;
   flex-direction: column;
+  margin-right: 91px;
+  color: white;
+}
+.release-announcement .h2 {
+  font-size: 20;
 }
 
 .for-warhammer-animation {
@@ -17,15 +42,17 @@
 }
 
 .skullthrone-button {
-  background-image: url("/assets/images/skullThrone.webp");
+  background-image: url("/assets/images/Mark_of_Khorne.webp");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
-  background-color: transparent; /* 기본 배경색 투명하게 */
-  border: none;
+  background-size: cover;
+  background-position: center;
+
+  background-color: transparent;
   text-indent: -9999px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -67,6 +94,18 @@
   align-self: end;
 }
 
+.bubble-animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.button-bubble-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .speech-bubble {
   position: relative;
   width: 250px;
@@ -83,9 +122,31 @@
   position: absolute;
   width: 0;
   height: 0;
-  border: 22.5px solid transparent; /* 일단 모든 테두리를 투명하게 */
+  border: 22.5px solid transparent;
   border-top-color: #a42c2c;
-  bottom: -45px; /* 본체 바깥 아래로 20px만큼 내리기 (테두리 두께 2배) */
-  right: 50%; /* 왼쪽에서 30px 떨어진 곳에 배치 */
+  bottom: -44px;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.speech-bubble-throne {
+  position: relative;
+  width: 250px;
+  padding: 20px;
+  background-color: #a42c2c;
+  border-radius: 12px;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.speech-bubble-throne::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 22.5px solid transparent;
+  border-top-color: #a42c2c;
+  bottom: -45px;
+  right: 50%;
   transform: translateX(-50%);
 }
