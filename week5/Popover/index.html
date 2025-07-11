@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>팝오버(Popover)</title>
+    <meta name="description" content="팝오버(Popover) 컴포넌트를 제작합니다." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css"
+      crossorigin
+    />
+    <link rel="icon" href="/assets/images/ecmascript-logo.png" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js" defer></script>
+  </head>
+
+  <body>
+    <button
+      type="button"
+      class="popover-trigger"
+      data-popover-position="top"
+      aria-label="팝오버란?"
+      title="팝오버란?"
+    >
+      <svg width="40" height="20" viewBox="0 0 40 20">
+        <use href="#arrow"></use>
+      </svg>
+    </button>
+    <div class="container">
+      <div class="grid">
+        <h1 aria-label="팝오버(Popover)">
+          <span>P</span>
+          <span>O</span>
+          <span>P</span>
+          <span>O</span>
+          <span>V</span>
+          <span>E</span>
+          <span>R</span>
+          <span>S</span>
+        </h1>
+      </div>
+    </div>
+
+    <svg hidden>
+      <symbol id="arrow">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M21.874 1.5l16.448 13.157A3 3 0 0 1 36.448 20H3.552a3 3 0 0 1-1.874-5.343L18.126 1.5a3 3 0 0 1 3.748 0z"
+        ></path>
+      </symbol>
+    </svg>
+  </body>
+</html>
