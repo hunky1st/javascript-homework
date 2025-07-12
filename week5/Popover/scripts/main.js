@@ -1,6 +1,5 @@
 const POPOVER_SPACE = 10;
 
-// [여기!] generateUniquePopoverId 함수를 다른 함수들과 함께 위로 이동
 function generateUniquePopoverId(length = 5) {
   return `popover-${Math.random()
     .toString(36)
