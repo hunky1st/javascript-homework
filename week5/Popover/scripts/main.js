@@ -1,5 +1,12 @@
 const POPOVER_SPACE = 10;
 
+// [여기!] generateUniquePopoverId 함수를 다른 함수들과 함께 위로 이동
+function generateUniquePopoverId(length = 5) {
+  return `popover-${Math.random()
+    .toString(36)
+    .substring(2, length + 2)}`;
+}
+
 function calculatePopoverPosition(popoverTrigger, popover) {
   const triggerRect = popoverTrigger.getBoundingClientRect();
   const popoverRect = popover.getBoundingClientRect();
@@ -44,13 +51,16 @@ function isShow(popover) {
 }
 
 function createPopover(popoverTrigger) {
-  const { target, content, popoverPosition } = popoverTrigger.dataset;
+  const { content, popoverPosition } = popoverTrigger.dataset;
+
+  const popoverId = generateUniquePopoverId();
+  popoverTrigger.dataset.target = popoverId;
 
   const popover = document.createElement("div");
   popover.classList.add("popover");
 
+  popover.dataset.id = popoverId;
   popover.dataset.position = popoverPosition;
-  popover.dataset.id = target;
 
   const popoverContent = document.createElement("p");
   popoverContent.textContent = content;
