@@ -16,17 +16,6 @@
   </head>
 
   <body>
-    <button
-      type="button"
-      class="popover-trigger"
-      data-popover-position="top"
-      aria-label="팝오버란?"
-      title="팝오버란?"
-    >
-      <svg width="40" height="20" viewBox="0 0 40 20">
-        <use href="#arrow"></use>
-      </svg>
-    </button>
     <div class="container">
       <div class="grid">
         <h1 aria-label="팝오버(Popover)">
@@ -39,9 +28,64 @@
           <span>R</span>
           <span>S</span>
         </h1>
+        <button
+          type="button"
+          class="popover-trigger"
+          data-popover-position="top"
+          aria-label="팝오버란?"
+          title="팝오버란?"
+        >
+          <svg width="40" height="20" viewBox="0 0 40 20">
+            <use href="#arrow"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="popover-trigger"
+          data-popover-position="left"
+          aria-label="팝오버란?"
+          title="팝오버란?"
+        >
+          <svg width="40" height="20" viewBox="0 0 40 20">
+            <use href="#arrow"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="popover-trigger"
+          data-popover-position="right"
+          aria-label="팝오버란?"
+          title="팝오버란?"
+        >
+          <svg width="40" height="20" viewBox="0 0 40 20">
+            <use href="#arrow"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="popover-trigger"
+          data-popover-position="bottom"
+          aria-label="팝오버란?"
+          title="팝오버란?"
+        >
+          <svg width="40" height="20" viewBox="0 0 40 20">
+            <use href="#arrow"></use>
+          </svg>
+        </button>
       </div>
     </div>
-
+    <div class="popover" data-position="top">
+      <p>위</p>
+    </div>
+    <div class="popover" data-position="left">
+      <p>왼쪽</p>
+    </div>
+    <div class="popover" data-position="right">
+      <p>오른쪽</p>
+    </div>
+    <div class="popover" data-position="bottom">
+      <p>아래</p>
+    </div>
     <svg hidden>
       <symbol id="arrow">
         <path
