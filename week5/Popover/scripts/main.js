@@ -43,18 +43,39 @@ function isShow(popover) {
   return !popover.hasAttribute("hidden");
 }
 
+function createPopover(popoverTrigger) {
+  const { target, content, popoverPosition } = popoverTrigger.dataset;
+
+  const popover = document.createElement("div");
+  popover.classList.add("popover");
+
+  popover.dataset.position = popoverPosition;
+  popover.dataset.id = target;
+
+  const popoverContent = document.createElement("p");
+  popoverContent.textContent = content;
+
+  popover.append(popoverContent);
+  document.body.append(popover);
+
+  return popover;
+}
+
 const popoverTriggers = document.querySelectorAll(".popover-trigger");
 
 popoverTriggers.forEach((popoverTrigger) => {
   const selector = `[data-id="${popoverTrigger.dataset.target}"]`;
-  const popover = document.querySelector(selector);
+  let popover = document.querySelector(selector);
 
-  if (popover) {
-    const { left, top } = calculatePopoverPosition(popoverTrigger, popover);
-    popover.style.left = `${left}px`;
-    popover.style.top = `${top}px`;
-    hide(popover);
+  if (!popover) {
+    popover = createPopover(popoverTrigger);
   }
+
+  const { left, top } = calculatePopoverPosition(popoverTrigger, popover);
+  popover.style.left = `${left}px`;
+  popover.style.top = `${top}px`;
+
+  hide(popover);
 });
 
 document.addEventListener("click", ({ target }) => {
@@ -63,6 +84,9 @@ document.addEventListener("click", ({ target }) => {
   if (popoverTrigger) {
     const selector = `[data-id="${popoverTrigger.dataset.target}"]`;
     const popover = document.querySelector(selector);
+
+    if (!popover) return;
+
     const isVisible = isShow(popover);
 
     document.querySelectorAll(".popover").forEach(hide);
@@ -73,9 +97,7 @@ document.addEventListener("click", ({ target }) => {
     return;
   }
 
-  if (target.closest(".popover")) {
-    return;
+  if (!target.closest(".popover")) {
+    document.querySelectorAll(".popover").forEach(hide);
   }
-
-  document.querySelectorAll(".popover").forEach(hide);
 });
